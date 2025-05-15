@@ -44,6 +44,8 @@ export const AuthProvider = ({ children }) => {
     setUser(null)
     setToken(null)
     navigate('/login')
+    localStorage.removeItem('user')
+    localStorage.removeItem('token')
   }
 
   const isAuthenticated = !!token

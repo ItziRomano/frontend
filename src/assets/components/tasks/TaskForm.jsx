@@ -15,10 +15,18 @@ const TaskForm = ({ onSubmit, onCancel, initialData }) => {
     }
   }, [initialData])
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   onSubmit({ description })
+  // }
   const handleSubmit = (e) => {
-    e.preventDefault()
-    onSubmit({ description })
+  e.preventDefault()
+  if (initialData) {
+    onSubmit({ description }) // Para editar
+  } else {
+    onSubmit(description) // Para crear
   }
+}
 
   return (
     <Box mt={2} mb={4} p={2} className="task-form">
