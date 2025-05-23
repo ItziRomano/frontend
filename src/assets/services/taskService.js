@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-// const API_URL = 'http://localhost:5000/api/v1/tasks'
-const API_URL = 'https://backend-1-pway.onrender.com/api/v1/tasks'
+const API_URL = 'http://localhost:5000/api/v1/tasks'
+
 
 const getAuthHeader = () => {
   const token = localStorage.getItem('token')

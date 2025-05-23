@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'https://backend-1-pway.onrender.com/api/auth'
-// const API_URL = 'http://localhost:5000/api/auth'
+const API_URL = 'http://localhost:5000/api/v1/auth'
 
 const register = async (email, password, firstName, lastName) => {
   const response = await axios.post(`${API_URL}/register`, {
